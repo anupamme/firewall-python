@@ -10,7 +10,7 @@ jobs:
       matrix:
         # macos-14 is ARM-based
         # macos-14-large is x86-based
-        # ubuntu-latest (x86) is not included because the full test suite runs on it
+        # ubuntu-24.04 (x86) is not included because the full test suite runs on it
         os: [windows-latest, macos-14, macos-14-large, ubuntu-22.04-arm]
 
     # Allows all jobs to run even if one fails
@@ -58,7 +58,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, ubuntu-22.04-arm]
+        os: [ubuntu-24.04, ubuntu-22.04-arm]
         python-version: ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13", "3.14"]
 
     steps:
